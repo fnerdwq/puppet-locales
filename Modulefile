@@ -6,3 +6,6 @@ license 'Apache License, Version 2.0'
 summary 'Puppet module managing locales'
 description 'Small module to manage locales on Debian like sysetems'
 project_page 'https://github.com/fnerdwq/puppet-locales'
+
+## Add dependencies, if any:
+dependency 'puppetlabs/stdlib', '>= 4.1.0'
