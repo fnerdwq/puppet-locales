@@ -1,11 +1,8 @@
-name    'wagit-locales'
+name    'fnerdwq-locales'
 version '0.1.0'
-source 'UNKNOWN'
-author 'wagit'
+source 'https://github.com/fnerdwq/puppet-locales.git'
+author 'Frederik Wagner'
 license 'Apache License, Version 2.0'
-summary 'UNKNOWN'
-description 'UNKNOWN'
-project_page 'UNKNOWN'
-
-## Add dependencies, if any:
-dependency 'puppetlabs/stdlib', '>= 4.1.0'
+summary 'Puppet module managing locales'
+description 'Small module to manage locales on Debian like sysetems'
+project_page 'https://github.com/fnerdwq/puppet-locales'
