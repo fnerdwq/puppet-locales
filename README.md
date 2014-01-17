@@ -13,7 +13,7 @@
 
 ##Overview
 
-This modules manages locales on Debian like system. It compiles locales and sets a default-
+This modules manages locales on Debian like system. It compiles locales and sets a default.
 
 Written for Puppet >= 3.4.0.
 
