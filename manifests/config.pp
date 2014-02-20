@@ -2,7 +2,7 @@
 class locales::config () {
 
   exec { 'update-locales':
-    command     => "debconf-set-selections < /root/preseed/locales.preseed && \
+    command     => "debconf-set-selections < /var/local/debconf/locales.preseed && \
 rm -f /etc/locale.gen &&
 dpkg-reconfigure --frontend=noninteractive ${locales::params::package_name}",
     refreshonly => true,

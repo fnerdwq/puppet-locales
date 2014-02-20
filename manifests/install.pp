@@ -1,19 +1,18 @@
 # presseding and installation of locales package (private)
 class locales::install {
 
-  ensure_resource ('file', '/root/preseed', {'ensure' => 'directory'})
+  ensure_resource ('file', '/var/local/debconf', {'ensure' => 'directory'})
 
-  file { '/root/preseed/locales.preseed':
+  file { '/var/local/debconf/locales.preseed':
     content => template('locales/preseed.erb'),
     mode    => '0600',
     backup  => false,
-    require => File['/root/preseed'],
   }
 
   package { $locales::params::package_name:
     ensure       => installed,
-    responsefile => '/root/preseed/locales.preseed',
-    require      => File['/root/preseed/locales.preseed'],
+    responsefile => '/var/local/debconf/locales.preseed',
+    require      => File['/var/local/debconf/locales.preseed'],
   }
 
 }
